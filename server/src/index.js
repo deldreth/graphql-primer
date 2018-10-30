@@ -31,8 +31,6 @@ const resolvers = {
         {
           data: {
             name: args.input.name,
-            age: args.input.age,
-            weight: args.input.weight,
             breed: args.input.breed,
             location: {
               connect: {
