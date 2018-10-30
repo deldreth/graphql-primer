@@ -36,7 +36,7 @@ const resolvers = {
             breed: args.input.breed,
             location: {
               connect: {
-                id: args.locationId
+                id: args.input.locationId
               }
             }
           }

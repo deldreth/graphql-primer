@@ -101,7 +101,7 @@ const Form = styled('form')`
   display: grid;
   grid-gap: 1em;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   input[type='text'],
   select {
