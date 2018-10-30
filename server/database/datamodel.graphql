@@ -1,0 +1,12 @@
+type Location {
+  id: ID! @unique
+  name: String!
+  cats: [Cat!]!
+}
+
+type Cat {
+  id: ID! @unique
+  name: String!
+  breed: String
+  location: Location
+}

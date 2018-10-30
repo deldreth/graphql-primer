@@ -1,0 +1,34 @@
+# import Location, LocationSubscriptionPayload from './generated/prisma.graphql'
+# import Cat, CatSubscriptionPayload from './generated/prisma.graphql'
+
+input LocationInput {
+  name: String!
+}
+
+input CatInput {
+  name: String!
+  breed: String
+  locationId: ID!
+}
+
+type Query {
+  locations: [Location]!
+  location(id: ID!): Location!
+  cat(id: ID!): Cat!
+}
+
+type Mutation {
+  addLocation(input: LocationInput): Location!
+  addCat(input: CatInput): Cat!
+}
+
+type Subscription {
+  locationAdded: LocationSubscriptionPayload
+  catAddedOrUpdated(locationId: ID!): CatSubscriptionPayload
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
